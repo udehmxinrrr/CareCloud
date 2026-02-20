@@ -5,4 +5,4 @@ def home(request):
     return render(request, 'index.html')
 
 def starter(request):
-    return render(request, 'starter-page.html.html')
+    return render(request, 'starter-page.html')
