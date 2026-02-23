@@ -21,5 +21,5 @@ class Doctors(models.Model):
     Specialization = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.firstname + " " + self.lastname
+        return self.firstname + " " + self.lastname + " " + self.Specialization
 
