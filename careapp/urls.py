@@ -4,8 +4,10 @@ from careapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.home, name='home' ),
+    path('', views.home, ),
     path('starter/', views.starter, name='starter' ),
+    path ('appointments/', views.appointments, name='appointments' ),
+    path('about/', views.about, name='about'),
 
 
 ]
