@@ -1,0 +1,36 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1 class="text-center fw-4">All Appointments</h1>
+
+<table class="table container table-bordered table-dark ">
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Date & Time</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Message</th>
+    </tr>
+
+        {% for appointment in allappointments %}
+        <tr>
+            <td>{{appointment.Name}}</td>
+            <td>{{appointment.email}}</td>
+            <td>{{appointment.Phone}}</td>
+            <td>{{appointment.datetime}}</td>
+            <td>{{appointment.Department}}</td>
+            <td>{{appointment.Doctor}}</td>
+            <td>{{appointment.Message}}</td>
+        </tr>
+        {% endfor %}
+
+
+
+
+</table>
+{% endblock %}

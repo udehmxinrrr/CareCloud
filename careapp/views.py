@@ -12,13 +12,13 @@ def starter(request):
 def appointments(request):
     if request.method == 'POST':
         all = Appointment(
-            Name = request.POST['Name'],
+            Name = request.POST['name'],
             email = request.POST['email'],
-            Phone = request.POST['Phone '],
-            datetime = request.POST['datetime'],
-            Department = request.POST['Department'],
-            Doctor = request.POST['Doctor'],
-            Message = request.POST['Message'],
+            Phone = request.POST['phone'],
+            datetime = request.POST['date'],
+            Department = request.POST['department'],
+            Doctor = request.POST['doctor'],
+            Message = request.POST['message'],
 
         )
         all.save()
@@ -31,3 +31,7 @@ def appointments(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def show(request):
+    allappointments = Appointment.objects.all()
+    return render(request, 'show.html', {'allappointments': allappointments})

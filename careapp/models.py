@@ -2,8 +2,6 @@ from django.db import models
 
 # Create your models here.
 class PatientS(models.Model):
-
-
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     DOB = models.DateField()
@@ -15,6 +13,8 @@ class PatientS(models.Model):
     def __str__(self):
         return self.firstname + " " + self.lastname
 
+
+
 class Doctors(models.Model):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
@@ -24,6 +24,8 @@ class Doctors(models.Model):
 
     def __str__(self):
         return self.firstname + " " + self.lastname + " " + self.Specialization
+
+
 
 class Appointment(models.Model):
     Name = models.CharField(max_length=200)
@@ -35,4 +37,4 @@ class Appointment(models.Model):
     Message = models.TextField()
 
     def __str__(self):
-        return self.Name + " " + self.Phone + " " + self.DateTime
+        return self.Name
