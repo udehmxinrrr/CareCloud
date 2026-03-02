@@ -30,6 +30,7 @@
             <td>
                 <a href="/edit/{{appointment.id}}" class="btn btn-primary rounded-4">Edit</a>
                 <a href="/delete/{{appointment.id}}" class="btn btn-danger rounded-4 ms-3">Delete</a>
+                <a href="{% url 'pay' %}" class="btn btn-success rounded-4 ms-3">Pay by Mpesa</a>
             </td>
         </tr>
         {% endfor %}
